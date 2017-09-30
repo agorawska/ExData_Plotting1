@@ -24,7 +24,7 @@ energyData<-energyData[energyData$Date %in% c("1/2/2007","2/2/2007"),]
 #formating energyData$Date to Date format
 energyData$Date <- as.Date(energyData$Date,"%d/%m/%Y")
 
-#ploting historgram
+#ploting histogram
 png("plot1.png", width=480, height=480)
 hist(as.numeric(energyData$Global_active_power), main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red")
 dev.off()
